@@ -56,7 +56,7 @@ def lr_trick(weights, bias, features, label, learning_rate = 0.01):
     pred = lr_prediction(weights, bias, features)
     for i in range(len(weights)):
         weights[i] += (label-pred)*features[i]*learning_rate
-        bias += (label-pred)*learning_rate
+    bias += (label-pred)*learning_rate
     return weights, bias
  
 def lr_algorithm(features, labels, learning_rate = 0.01, epochs = 200):

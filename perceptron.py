@@ -58,7 +58,7 @@ def perceptron_trick(weights, bias, features, label, learning_rate = 0.01):
     for i in range(len(weights)):
         # (label-pred) will either zero out the operand, make it negative, or keep it positive
         weights[i] += (label-pred)*features[i]*learning_rate
-        bias += (label-pred)*learning_rate
+    bias += (label-pred)*learning_rate
     return weights, bias
 
 def perceptron_algorithm(X, Y, learning_rate = 0.01, epochs = 200):
